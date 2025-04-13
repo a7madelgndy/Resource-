@@ -21,58 +21,46 @@ class LocalNotifaction: UIViewController {
 
         
         // 1- Take user Authorizaiton (we would like to send you notificatuon allow or not allow )
-        auth()
-        
-        //2 - the content Notification Conent
-        notificationContent     = createNotificationContent()
+        // in the appDelegate
 
-        actionButton.addTarget(self, action: #selector(makeNotification), for:  .touchUpInside)
+        actionButton.addTarget(self, action: #selector(makeANotification), for:  .touchUpInside)
     }
     
-    @objc func makeNotification() {
-      //3- Creat notification Request
-        if let notificationContent {
-            createNotificationRequest(withContent: notificationContent)
-        }
-        
+    @objc func makeANotification() {
+        createNotificationToUser()
     }
     
-    func auth() {
-        let authOption = UNAuthorizationOptions(arrayLiteral: .alert, .sound  , .badge)
-        notification?.requestAuthorization(options: authOption, completionHandler: { (scuccess , error) in
-            if let error {
-                print(error.localizedDescription)
-            }
-        })
-    }
     
-    func createNotificationContent() -> UNMutableNotificationContent{
-        let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = "important Meeting"
-        notificationContent.body = "please join our meeting"
-        notificationContent.badge = 1
+    func createNotificationToUser(){
+        //Content
+        let content = UNMutableNotificationContent()
+        content.title = "important Meeting"
+        content.body = "please join our meeting"
+        content.badge = 39
+        content.sound = UNNotificationSound.defaultRingtone
         
         //add attachment to the notification = image
-        if let url = Bundle.main.url(forResource: "panda", withExtension: "png") {
+        if let url = Bundle.main.url(forResource: "done", withExtension: "jpg") {
             if let attachment = try? UNNotificationAttachment(identifier: "1", url: url) {
-                notificationContent.attachments = [attachment]
+                content.attachments = [attachment]
             }
         }
-      return notificationContent
-    }
-
-    func createNotificationRequest(withContent content: UNNotificationContent ){
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        
+       //Trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10 , repeats: false)
+        
+        //Reguest
         let request = UNNotificationRequest(identifier: "1", content: content, trigger: trigger)
         
+        //add resuest to notification
         notification?.add(request) { error in
             if let error {
                 print(error.localizedDescription)
             }
          }
     }
-}
 
+}
 
 
 

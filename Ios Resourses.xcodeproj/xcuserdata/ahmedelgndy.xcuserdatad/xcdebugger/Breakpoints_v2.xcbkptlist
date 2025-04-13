@@ -14,9 +14,9 @@
             filePath = "Ios Resourses/Local notification/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "createNotificationContent()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "createNotificationToUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "Ios Resourses/Local notification/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "createNotificationContent()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "createNotificationToUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,25 @@
             filePath = "Ios Resourses/Local notification/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "createNotificationContent()"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "createNotificationToUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "896CE883-ED30-4796-9B91-5573804FD51E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ios Resourses/Local notification/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "createNotificationToUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
