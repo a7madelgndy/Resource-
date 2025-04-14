@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		157170652DABFEE70074A696 /* done.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 157170642DABFEE70074A696 /* done.jpg */; };
+		157170682DAC23170074A696 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157170672DAC23170074A696 /* FoodViewController.swift */; };
+		158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */; };
+		158A1CEC2DAD6C7D00267AF0 /* UIView + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CEB2DAD6C7D00267AF0 /* UIView + EXT.swift */; };
+		158A1CF12DAD6F5500267AF0 /* SectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CF02DAD6F5500267AF0 /* SectionDecorationView.swift */; };
+		158A1CF42DAD6FC000267AF0 /* AppLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CF32DAD6FC000267AF0 /* AppLayouts.swift */; };
+		158A1CF62DAD727C00267AF0 /* FoodTopBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CF52DAD727C00267AF0 /* FoodTopBannerModel.swift */; };
+		158A1CFA2DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CF92DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift */; };
 		159BA2542DA7C78800C4BDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA2532DA7C78800C4BDEB /* AppDelegate.swift */; };
 		159BA2562DA7C78800C4BDEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA2552DA7C78800C4BDEB /* SceneDelegate.swift */; };
 		159BA2582DA7C78800C4BDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA2572DA7C78800C4BDEB /* ViewController.swift */; };
@@ -16,6 +23,13 @@
 
 /* Begin PBXFileReference section */
 		157170642DABFEE70074A696 /* done.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = done.jpg; sourceTree = "<group>"; };
+		157170672DAC23170074A696 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButon+EXT.swift"; sourceTree = "<group>"; };
+		158A1CEB2DAD6C7D00267AF0 /* UIView + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + EXT.swift"; sourceTree = "<group>"; };
+		158A1CF02DAD6F5500267AF0 /* SectionDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDecorationView.swift; sourceTree = "<group>"; };
+		158A1CF32DAD6FC000267AF0 /* AppLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLayouts.swift; sourceTree = "<group>"; };
+		158A1CF52DAD727C00267AF0 /* FoodTopBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTopBannerModel.swift; sourceTree = "<group>"; };
+		158A1CF92DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTopBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		159BA2502DA7C78800C4BDEB /* Ios Resourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios Resourses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		159BA2532DA7C78800C4BDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		159BA2552DA7C78800C4BDEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +67,68 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		157170662DAC22B00074A696 /* CompositionalLayout */ = {
+			isa = PBXGroup;
+			children = (
+				158A1CF22DAD6F9E00267AF0 /* Model */,
+				158A1CEE2DAD6F2B00267AF0 /* View */,
+				158A1CED2DAD6CCC00267AF0 /* Controllers */,
+				158A1CEA2DAD6C6B00267AF0 /* Extensions */,
+			);
+			path = CompositionalLayout;
+			sourceTree = "<group>";
+		};
+		158A1CEA2DAD6C6B00267AF0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */,
+				158A1CEB2DAD6C7D00267AF0 /* UIView + EXT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		158A1CED2DAD6CCC00267AF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				157170672DAC23170074A696 /* FoodViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		158A1CEE2DAD6F2B00267AF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				158A1CF72DAD72EC00267AF0 /* Cell */,
+				158A1CEF2DAD6F3000267AF0 /* Header */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		158A1CEF2DAD6F3000267AF0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				158A1CF02DAD6F5500267AF0 /* SectionDecorationView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		158A1CF22DAD6F9E00267AF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				158A1CF32DAD6FC000267AF0 /* AppLayouts.swift */,
+				158A1CF52DAD727C00267AF0 /* FoodTopBannerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		158A1CF72DAD72EC00267AF0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				158A1CF92DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		159BA2472DA7C78800C4BDEB = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +148,7 @@
 		159BA2522DA7C78800C4BDEB /* Ios Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				157170662DAC22B00074A696 /* CompositionalLayout */,
 				150015BB2DABC43500674223 /* Local notification */,
 				150015BC2DABC44300674223 /* Support */,
 				159BA2612DA7C78A00C4BDEB /* Info.plist */,
@@ -150,7 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158A1CFA2DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift in Sources */,
+				158A1CEC2DAD6C7D00267AF0 /* UIView + EXT.swift in Sources */,
+				157170682DAC23170074A696 /* FoodViewController.swift in Sources */,
+				158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */,
+				158A1CF12DAD6F5500267AF0 /* SectionDecorationView.swift in Sources */,
 				159BA2582DA7C78800C4BDEB /* ViewController.swift in Sources */,
+				158A1CF62DAD727C00267AF0 /* FoodTopBannerModel.swift in Sources */,
+				158A1CF42DAD6FC000267AF0 /* AppLayouts.swift in Sources */,
 				159BA2542DA7C78800C4BDEB /* AppDelegate.swift in Sources */,
 				159BA2562DA7C78800C4BDEB /* SceneDelegate.swift in Sources */,
 			);

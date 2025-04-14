@@ -18,10 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         
         window?.windowScene = windowScene
-        window?.rootViewController = LocalNotifaction()
+        window?.rootViewController =  UINavigationController(rootViewController: FoodViewController())
         window?.makeKeyAndVisible()
         
-        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
