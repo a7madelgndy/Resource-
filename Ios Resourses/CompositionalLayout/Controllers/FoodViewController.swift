@@ -8,8 +8,6 @@
 import UIKit
 
 class FoodViewController: UIViewController {
-
-    
     
     //MARK: Properties
     var navigationView : UIView = {
@@ -21,11 +19,9 @@ class FoodViewController: UIViewController {
     
     lazy var collectionView : UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
-        cv.translatesAutoresizingMaskIntoConstraints = false
         cv.dataSource = self
         cv.delegate = self
         cv.register(FoodTopBannerCollectionViewCell.self, forCellWithReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier)
-        cv.backgroundColor = .systemBackground
         return cv
     }()
     
@@ -33,11 +29,11 @@ class FoodViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         configureUI()
+        
         setUpNavigation()
         configureConstrains()
         configureCompoitionalLayou()
     }
-    
     
     private func configureUI() {
         view.backgroundColor = .systemBackground
@@ -65,21 +61,20 @@ class FoodViewController: UIViewController {
             navigationView.topAnchor.constraint(equalTo: view.topAnchor, constant: 64),
             navigationView.heightAnchor.constraint(equalToConstant: 64)
             
-        
+            
         ])
     }
-    }
+}
 
-
+//MARK: Ext
 extension FoodViewController {
     func configureCompoitionalLayou() {
-        let layout = UICollectionViewCompositionalLayout{ sectionIndext, enviroment in
-            switch sectionIndext {
-            case 0 : AppLayouts.shared.foodBannderSection()
-            default: AppLayouts.shared.foodBannderSection()
+        let layout = UICollectionViewCompositionalLayout { sectionIndex,  enviorment in
+            switch sectionIndex {
+            default:
+                return AppLayouts.shared.foodBannderSection()
             }
         }
-        layout.register(SectionDecorationView.self, forDecorationViewOfKind: "SectionBackground")
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
 }
@@ -88,28 +83,26 @@ extension FoodViewController {
 extension FoodViewController : UICollectionViewDataSource , UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-        case 0 :
-            return foodTopBannerMockData.count
-        default:
-            return foodTopBannerMockData.count
+        default: foodTopBannerMockData.count
         }
     }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch indexPath.section {
-        case 0 :
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier, for: indexPath) as? FoodTopBannerCollectionViewCell else {fatalError("Unable deque cell...")}
+        switch indexPath.section{
+         default:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier, for: indexPath) as? FoodTopBannerCollectionViewCell else {
+                fatalError("Unable deque cell...")
+            }
             cell.cellData = foodTopBannerMockData[indexPath.row]
             return cell
-            
-        default:
-            return UICollectionViewCell()
-        
         }
+ 
     }
     
     
 }
+
