@@ -22,6 +22,8 @@ class FoodViewController: UIViewController {
         cv.dataSource = self
         cv.delegate = self
         cv.register(FoodTopBannerCollectionViewCell.self, forCellWithReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier)
+        
+        cv.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
         return cv
     }()
     
@@ -71,8 +73,9 @@ extension FoodViewController {
     func configureCompoitionalLayou() {
         let layout = UICollectionViewCompositionalLayout { sectionIndex,  enviorment in
             switch sectionIndex {
-            default:
-                return AppLayouts.shared.foodBannderSection()
+            case 0 : return AppLayouts.shared.foodBannderSection()
+            default :
+                return AppLayouts.shared.foodCategorySection()
             }
         }
         collectionView.setCollectionViewLayout(layout, animated: true)
@@ -83,26 +86,38 @@ extension FoodViewController {
 extension FoodViewController : UICollectionViewDataSource , UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-        default: foodTopBannerMockData.count
+        case 0 : foodTopBannerMockData.count
+        default: foodCategoryMockData.count
         }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
+        2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section{
-         default:
+        case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier, for: indexPath) as? FoodTopBannerCollectionViewCell else {
                 fatalError("Unable deque cell...")
             }
             cell.cellData = foodTopBannerMockData[indexPath.row]
             return cell
+        default:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? FoodCategoryCollectionViewCell else {
+                fatalError("Unable deue cell..")
+            }
+                cell.cellData = foodCategoryMockData[indexPath.row]
+                return cell
+            }
+            
         }
  
     }
     
     
-}
 
+
+#Preview {
+    FoodViewController()
+}
