@@ -11,7 +11,6 @@ struct FoodCategoryModel{
     let categoryName: String
     let categoryImage: String
 }
-
 let foodCategoryMockData  = [
     FoodCategoryModel(categoryName: "offers near you", categoryImage: "ic_offer"),
     FoodCategoryModel(categoryName: "veg only", categoryImage: "ic_vegonly"),
