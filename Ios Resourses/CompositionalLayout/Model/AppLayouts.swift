@@ -60,16 +60,17 @@ class AppLayouts {
         
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Header", alignment: .top
+        )
+        
+        header.pinToVisibleBounds = true
         section.boundarySupplementaryItems = [
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Header", alignment: .top),
+            header,
             .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Footer", alignment: .bottom) ]
         
         return section
     }
 }
-#Preview {
-    return FoodViewController()
-}
-
 
 

@@ -49,7 +49,7 @@ class FilterHeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        [allRestaurants, filterBtn, divider].forEach{addSubview($0)}
+        [allRestaurants, filterBtn, filterIcon,  divider].forEach{addSubview($0)}
         configureConsTrains()
     }
     private func configureConsTrains() {
