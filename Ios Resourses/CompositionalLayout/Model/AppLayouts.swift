@@ -69,6 +69,9 @@ class AppLayouts {
             header,
             .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Footer", alignment: .bottom) ]
         
+        let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
+        section.decorationItems = [decorationItem]
+        
         return section
     }
 }

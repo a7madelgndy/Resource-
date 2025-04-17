@@ -81,6 +81,7 @@ extension FoodViewController {
             default : return AppLayouts.shared.restaurantListSection()
             }
         }
+        layout.register(SeactionDecorationView.self, forDecorationViewOfKind: "SectionBackground")
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
 }
