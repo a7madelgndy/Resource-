@@ -87,7 +87,8 @@ extension FoodViewController : UICollectionViewDataSource , UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0 : foodTopBannerMockData.count
-        default: foodCategoryMockData.count
+        case 1: foodCategoryMockData.count
+        default: RestaurantListModel.count
         }
     }
     
