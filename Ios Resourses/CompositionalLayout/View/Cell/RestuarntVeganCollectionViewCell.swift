@@ -8,6 +8,16 @@
 import UIKit
 
 class RestuarntVeganCollectionViewCell: UICollectionViewCell {
+    static let cellIdentifier = "RestuarntVeganCollectionViewCell"
+    
+    var cetData: VeganRestaurantModel? {
+        didSet {
+            guard let  cetData else {return}
+            restaurantImage.image = UIImage(named: cetData.coverImage)
+            title.text = cetData.restaurantName
+            subtitle.text = cetData.categoryTags
+        }
+        }
     
     let restaurantImage:UIImageView = {
         let iv = UIImageView()

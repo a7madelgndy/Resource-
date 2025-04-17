@@ -13,13 +13,14 @@ extension FoodViewController : UICollectionViewDataSource , UICollectionViewDele
         switch section {
         case 0 : foodTopBannerMockData.count
         case 1: foodCategoryMockData.count
-        default: restaurantListMockData.count
+        case 2: restaurantListMockData.count
+        default : veganRestaurantMockData.count
         }
     }
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        3
+        4
     }
     
     
@@ -37,11 +38,17 @@ extension FoodViewController : UICollectionViewDataSource , UICollectionViewDele
             }
             cell.cellData = foodCategoryMockData[indexPath.row]
             return cell
-        default :
+        case 2 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier, for: indexPath) as? RestaurantListCollectionViewCell else {
                 fatalError("Unable deue cell..")
             }
             cell.cellData = restaurantListMockData[indexPath.row]
+            return cell
+        default :
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RestuarntVeganCollectionViewCell.cellIdentifier, for: indexPath) as? RestuarntVeganCollectionViewCell else {
+                fatalError("Unable deue cell..")
+            }
+            cell.cetData = veganRestaurantMockData[indexPath.row]
             return cell
         }
         

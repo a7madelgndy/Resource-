@@ -25,10 +25,12 @@ class FoodViewController: UIViewController {
         
         cv.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
         cv.register(RestaurantListCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier)
+        cv.register(RestuarntVeganCollectionViewCell.self, forCellWithReuseIdentifier: RestuarntVeganCollectionViewCell.cellIdentifier)
         
         cv.register(FilterHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: FilterHeaderView.headerIdentifier)
         
         cv.register(DividerFooterView.self, forSupplementaryViewOfKind: "Footer", withReuseIdentifier: DividerFooterView.footerIdentifier)
+        
         return cv
     }()
     
@@ -77,7 +79,9 @@ class FoodViewController: UIViewController {
             switch sectionIndex {
             case 0 : return AppLayouts.shared.foodBannderSection()
             case 1 : return AppLayouts.shared.foodCategorySection()
-            default : return AppLayouts.shared.restaurantListSection()
+            case 2 : return AppLayouts.shared.restaurantListSection()
+            default : return
+                AppLayouts.shared.restaurantVeganSection()
             }
         }
         layout.register(SeactionDecorationView.self, forDecorationViewOfKind: "SectionBackground")
