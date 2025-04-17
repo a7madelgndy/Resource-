@@ -13,6 +13,7 @@ struct VeganRestaurantModel {
     let categoryTags: String
 }
 
+
 let veganRestaurantMockData = [
     VeganRestaurantModel(coverImage: "vegan_img1", restaurantName: "Punjabi Dhaba 35", categoryTags: "North Indian, Punjabi"),
     VeganRestaurantModel(coverImage: "vegan_img2", restaurantName: "Bittu Da Dhabha", categoryTags: "North India"),

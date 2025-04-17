@@ -22,7 +22,6 @@ class FoodViewController: UIViewController {
         cv.dataSource = self
         cv.delegate = self
         cv.register(FoodTopBannerCollectionViewCell.self, forCellWithReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier)
-        
         cv.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
         cv.register(RestaurantListCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier)
         cv.register(RestuarntVeganCollectionViewCell.self, forCellWithReuseIdentifier: RestuarntVeganCollectionViewCell.cellIdentifier)
@@ -34,22 +33,21 @@ class FoodViewController: UIViewController {
         
         return cv
     }()
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         configureUI()
-        
         setUpNavigation()
         configureConstrains()
         configureCompoitionalLayou()
     }
     
+    
     private func configureUI() {
         view.backgroundColor = .systemBackground
-        view.addSubview(navigationView)
-        view.addSubview(collectionView)
+        view.addSubviews([navigationView , collectionView])
     }
+    
     
     private func setUpNavigation() {
         navigationController?.navigationBar.barTintColor = .systemBackground
@@ -63,6 +61,7 @@ class FoodViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
     }
     
+    
     func configureConstrains() {
         collectionView.pinToEages(to: view)
         NSLayoutConstraint.activate([
@@ -74,6 +73,7 @@ class FoodViewController: UIViewController {
             
         ])
     }
+    
     
     func configureCompoitionalLayou() {
         let layout = UICollectionViewCompositionalLayout { sectionIndex,  enviorment in

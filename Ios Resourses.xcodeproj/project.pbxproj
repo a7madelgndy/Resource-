@@ -15,6 +15,10 @@
 		155EF9E12DB13E9000CEFCB9 /* RestuarntVeganCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E02DB13E9000CEFCB9 /* RestuarntVeganCollectionViewCell.swift */; };
 		155EF9E32DB141AB00CEFCB9 /* RestaurantVeganModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E22DB141AB00CEFCB9 /* RestaurantVeganModel.swift */; };
 		155EF9E62DB154EC00CEFCB9 /* VeganHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E52DB154EC00CEFCB9 /* VeganHeaderView.swift */; };
+		155EF9E82DB159DA00CEFCB9 /* UIImageView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E72DB159DA00CEFCB9 /* UIImageView+EXT.swift */; };
+		155EF9EA2DB15D1800CEFCB9 /* UICollectionView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E92DB15D1800CEFCB9 /* UICollectionView+EXT.swift */; };
+		155EF9ED2DB1619D00CEFCB9 /* UICollectionViewCell+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9EC2DB1619D00CEFCB9 /* UICollectionViewCell+Protocol.swift */; };
+		155EF9EF2DB1630500CEFCB9 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9EE2DB1630500CEFCB9 /* BaseCollectionViewCell.swift */; };
 		157170652DABFEE70074A696 /* done.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 157170642DABFEE70074A696 /* done.jpg */; };
 		157170682DAC23170074A696 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157170672DAC23170074A696 /* FoodViewController.swift */; };
 		158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */; };
@@ -41,6 +45,10 @@
 		155EF9E02DB13E9000CEFCB9 /* RestuarntVeganCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarntVeganCollectionViewCell.swift; sourceTree = "<group>"; };
 		155EF9E22DB141AB00CEFCB9 /* RestaurantVeganModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVeganModel.swift; sourceTree = "<group>"; };
 		155EF9E52DB154EC00CEFCB9 /* VeganHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganHeaderView.swift; sourceTree = "<group>"; };
+		155EF9E72DB159DA00CEFCB9 /* UIImageView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+EXT.swift"; sourceTree = "<group>"; };
+		155EF9E92DB15D1800CEFCB9 /* UICollectionView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EXT.swift"; sourceTree = "<group>"; };
+		155EF9EC2DB1619D00CEFCB9 /* UICollectionViewCell+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Protocol.swift"; sourceTree = "<group>"; };
+		155EF9EE2DB1630500CEFCB9 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		157170642DABFEE70074A696 /* done.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = done.jpg; sourceTree = "<group>"; };
 		157170672DAC23170074A696 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButon+EXT.swift"; sourceTree = "<group>"; };
@@ -89,9 +97,18 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		155EF9EB2DB1616100CEFCB9 /* protocols  */ = {
+			isa = PBXGroup;
+			children = (
+				155EF9EC2DB1619D00CEFCB9 /* UICollectionViewCell+Protocol.swift */,
+			);
+			name = "protocols ";
+			sourceTree = "<group>";
+		};
 		157170662DAC22B00074A696 /* CompositionalLayout */ = {
 			isa = PBXGroup;
 			children = (
+				155EF9EB2DB1616100CEFCB9 /* protocols  */,
 				158A1CF22DAD6F9E00267AF0 /* Model */,
 				158A1CEE2DAD6F2B00267AF0 /* View */,
 				158A1CED2DAD6CCC00267AF0 /* Controllers */,
@@ -105,6 +122,8 @@
 			children = (
 				158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */,
 				158A1CEB2DAD6C7D00267AF0 /* UIView + EXT.swift */,
+				155EF9E72DB159DA00CEFCB9 /* UIImageView+EXT.swift */,
+				155EF9E92DB15D1800CEFCB9 /* UICollectionView+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +173,7 @@
 		158A1CF72DAD72EC00267AF0 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				155EF9EE2DB1630500CEFCB9 /* BaseCollectionViewCell.swift */,
 				158A1CF92DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift */,
 				152433462DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift */,
 				15B0C1FB2DB0104000C5D9D1 /* RestaurantListCollectionViewCell.swift */,
@@ -260,18 +280,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155EF9ED2DB1619D00CEFCB9 /* UICollectionViewCell+Protocol.swift in Sources */,
 				155EF9DA2DB134C600CEFCB9 /* SeactionDecorationView.swift in Sources */,
 				15B0C1FF2DB0115700C5D9D1 /* RestaurantListModel.swift in Sources */,
 				155EF9D82DB1231600CEFCB9 /* FilterHeaderView.swift in Sources */,
 				155EF9E12DB13E9000CEFCB9 /* RestuarntVeganCollectionViewCell.swift in Sources */,
 				158A1CFA2DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift in Sources */,
 				158A1CEC2DAD6C7D00267AF0 /* UIView + EXT.swift in Sources */,
+				155EF9E82DB159DA00CEFCB9 /* UIImageView+EXT.swift in Sources */,
 				155EF9DF2DB139BF00CEFCB9 /* FoodViewController +EXT.swift in Sources */,
 				157170682DAC23170074A696 /* FoodViewController.swift in Sources */,
 				158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */,
 				155EF9DC2DB137D600CEFCB9 /* DividerFooterView.swift in Sources */,
 				155EF9E62DB154EC00CEFCB9 /* VeganHeaderView.swift in Sources */,
+				155EF9EA2DB15D1800CEFCB9 /* UICollectionView+EXT.swift in Sources */,
 				158A1CF12DAD6F5500267AF0 /* SectionDecorationView.swift in Sources */,
+				155EF9EF2DB1630500CEFCB9 /* BaseCollectionViewCell.swift in Sources */,
 				159BA2582DA7C78800C4BDEB /* ViewController.swift in Sources */,
 				158A1CF62DAD727C00267AF0 /* FoodTopBannerModel.swift in Sources */,
 				152433472DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift in Sources */,

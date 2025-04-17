@@ -7,10 +7,11 @@
 
 import UIKit
 
-class FoodCategoryCollectionViewCell: UICollectionViewCell {
-    static let cellIdentifier = "FoodCategoryCollectionViewCell"
+class FoodCategoryCollectionViewCell: BaseCollectionViewCell {
+  
     private var categoryImageView = UIImageView()
     private var categorytitlelabe = UILabel()
+    
     
     var cellData: FoodCategoryModel? {
         didSet {
@@ -20,24 +21,21 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     private func configureUI() {
-        addSubview(categoryImageView)
+        addSubviews([categoryImageView , categorytitlelabe])
+        
         categoryImageView.translatesAutoresizingMaskIntoConstraints = false
         categoryImageView.layer.cornerRadius = 3
         categoryImageView.clipsToBounds = true
         categoryImageView.contentMode = .scaleAspectFit
-        
-        
-        addSubview(categorytitlelabe)
+
         categorytitlelabe.translatesAutoresizingMaskIntoConstraints = false
         categorytitlelabe.font = UIFont.systemFont(ofSize: 10, weight: .light)
         categorytitlelabe.numberOfLines = 2
@@ -55,5 +53,9 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
             categorytitlelabe.topAnchor.constraint(equalTo: categoryImageView.bottomAnchor, constant: 3),
         ])
         
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

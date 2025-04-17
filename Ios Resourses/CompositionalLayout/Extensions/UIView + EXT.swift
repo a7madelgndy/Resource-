@@ -26,4 +26,28 @@ extension UIView {
         self.layer.insertSublayer(gradient, at: 0)
     }
     
+    func applyShadow(
+            cornerRadius: CGFloat = 8,
+            borderWidth: CGFloat = 0.6,
+            borderColor: UIColor = UIColor.gray.withAlphaComponent(0.3),
+            shadowColor: UIColor = UIColor.label.withAlphaComponent(0.4),
+            shadowOffset: CGSize = CGSize(width: 0, height: 4),
+            shadowOpacity: Float = 1,
+            shadowRadius: CGFloat = 5
+        ) {
+            self.layer.cornerRadius = cornerRadius
+            self.layer.borderWidth = borderWidth
+            self.layer.borderColor = borderColor.cgColor
+            self.layer.shadowColor = shadowColor.cgColor
+            self.layer.shadowOffset = shadowOffset
+            self.layer.shadowOpacity = shadowOpacity
+            self.layer.shadowRadius = shadowRadius
+            self.backgroundColor = .clear
+            self.translatesAutoresizingMaskIntoConstraints = false
+        }
+    
+    func addSubviews(_ views:[UIView]) {
+        views.forEach{addSubview($0)}
+    }
 }
+

@@ -13,8 +13,6 @@ class FilterHeaderView: UICollectionReusableView {
     var leadingConstraints: NSLayoutConstraint?
     var trailingConstraints: NSLayoutConstraint?
     
-   
-    
     lazy var allRestaurants: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
@@ -39,6 +37,7 @@ class FilterHeaderView: UICollectionReusableView {
         d.isHidden = true
         return d
     }()
+    
     lazy var filterIcon: UIImageView = {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
@@ -49,10 +48,11 @@ class FilterHeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        [allRestaurants, filterBtn, filterIcon,  divider].forEach{addSubview($0)}
+        addSubviews([allRestaurants, filterBtn, filterIcon ,divider])
         backgroundColor = .tertiaryLabel
         configureConsTrains()
     }
+    
     private func configureConsTrains() {
         NSLayoutConstraint.activate([
             allRestaurants.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -78,6 +78,7 @@ class FilterHeaderView: UICollectionReusableView {
         trailingConstraints?.isActive = true
     }
 
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

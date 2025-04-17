@@ -8,7 +8,6 @@
 import UIKit
 
 class DividerFooterView: UICollectionReusableView {
-    
     static let footerIdentifier = "DividerFooterView"
     
     lazy var footer: UIView = {
@@ -17,14 +16,14 @@ class DividerFooterView: UICollectionReusableView {
         f.backgroundColor = .blue
         return f
     }()
-    
-    //MARK: Main LifeCycle
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(footer)
         setUpConstrains()
     }
+    
     
     func setUpConstrains(){
         NSLayoutConstraint.activate([
@@ -34,6 +33,7 @@ class DividerFooterView: UICollectionReusableView {
             footer.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

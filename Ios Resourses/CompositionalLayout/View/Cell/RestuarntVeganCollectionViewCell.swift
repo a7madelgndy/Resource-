@@ -7,9 +7,8 @@
 
 import UIKit
 
-class RestuarntVeganCollectionViewCell: UICollectionViewCell {
-    static let cellIdentifier = "RestuarntVeganCollectionViewCell"
-    
+class RestuarntVeganCollectionViewCell: BaseCollectionViewCell {
+   
     var cetData: VeganRestaurantModel? {
         didSet {
             guard let  cetData else {return}
@@ -68,11 +67,7 @@ class RestuarntVeganCollectionViewCell: UICollectionViewCell {
     }
     
     func configureView() {
-        addSubview(restaurantImage)
-        addSubview(title)
-        addSubview(dividerView)
-        addSubview(subtitle)
-        
+        addSubviews([restaurantImage ,title ,dividerView ,subtitle])
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             print(self.frame.size.width)
         }

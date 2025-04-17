@@ -11,6 +11,7 @@ struct FoodTopBannerModel {
     let image : String
 }
 
+
 let foodTopBannerMockData = [
     FoodTopBannerModel(image: "ic_food_banner4"),
     FoodTopBannerModel(image: "ic_food_banner1"),

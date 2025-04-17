@@ -19,6 +19,7 @@ struct RestaurantListModel {
     let benefitDesc: String
 }
 
+
 let restaurantListMockData = [
     RestaurantListModel(restaurantCoverImage: "Food_img1", restaurantName: "Burger Point", rating: 4.0, time: 20, description: "₹200 for two", tags: "Fast Food, American, Combo, Desserts, Beverages", location: "Sector 67", isFreeDelivery: true , benefitDesc: "extra 10% off + free delivery"),
     RestaurantListModel(restaurantCoverImage: "Food_img2", restaurantName: "Healthuy Cuisines", rating: 3.5, time: 36, description: "₹249 for two", tags: "Healthy Food, North Indian Chinese, Pizzas", location: "Sector 67", isFreeDelivery: true , benefitDesc: "extra 15% off + free delivery"),

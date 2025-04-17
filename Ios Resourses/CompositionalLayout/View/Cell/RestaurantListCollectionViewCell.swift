@@ -7,11 +7,11 @@
 
 import UIKit
 
-class RestaurantListCollectionViewCell: UICollectionViewCell {
-    static let cellIdentifier = "RestaurantListCollectionViewCell"
-    
+class RestaurantListCollectionViewCell: BaseCollectionViewCell {
+  
     var benefitHeightConstrains: NSLayoutConstraint?
     var locationHeightConstrains: NSLayoutConstraint?
+    
     
     var cellData : RestaurantListModel? {
         didSet {
@@ -35,21 +35,20 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    //MARK: Prop
+    
     lazy var restaurantImageCard: UIView = {
         let card = UIView()
         card.translatesAutoresizingMaskIntoConstraints = false
         return card
     }()
     
+    
     lazy var restaurantImgCover: UIImageView = {
         let img = UIImageView()
-        img.translatesAutoresizingMaskIntoConstraints = false
-        img.contentMode = .scaleAspectFill
-        img.clipsToBounds = true
-        img.layer.cornerRadius = 8
+        img.makeRoundedImageView()
         return img
     }()
+    
     
     lazy var offerView: UIView = {
         let offer = UIView()
@@ -66,6 +65,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         return offer
     }()
     
+    
     let offerLabel: UILabel = {
         let o = UILabel()
         o.translatesAutoresizingMaskIntoConstraints = false
@@ -73,6 +73,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         o.numberOfLines = 2
         return o
     }()
+    
     
     lazy var restaurantName: UILabel = {
         let res = UILabel()
@@ -82,11 +83,13 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         return res
     }()
     
+    
     let restaurantInfoLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
+    
     
     let restaurantTagLabel: UILabel = {
         let l = UILabel()
@@ -96,6 +99,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         return l
     }()
     
+    
     let restaurantLocationLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
@@ -103,6 +107,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         l.font = UIFont.systemFont(ofSize: 13,weight: .regular)
         return l
     }()
+    
     
     let benefitView: UIView = {
         let bn = UIView()
@@ -113,11 +118,13 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         return bn
     }()
     
+    
     let gradientView: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
+    
     
     let benefitIcon: UIImageView = {
         let img = UIImageView()
@@ -126,6 +133,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         img.image = UIImage(named: "ic_benefit")
         return img
     }()
+    
     
     let benefitLabel: UILabel = {
         let l = UILabel()
@@ -143,28 +151,20 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         setUpConstrains()
     }
     
+    
     func configure(){
-        addSubview(restaurantImageCard)
+        addSubviews([restaurantImageCard ,offerView ,restaurantName ,restaurantInfoLabel, restaurantTagLabel,restaurantLocationLabel, benefitView])
+        
         restaurantImageCard.addSubview(restaurantImgCover)
         
-        addSubview(offerView)
         offerView.addSubview(offerLabel)
-        
-        addSubview(restaurantName)
-        addSubview(restaurantInfoLabel)
-        addSubview(restaurantTagLabel)
-        addSubview(restaurantLocationLabel)
-        
-        addSubview(benefitView)
-        benefitView.addSubview(gradientView)
-        benefitView.addSubview(benefitIcon)
-        benefitView.addSubview(benefitLabel)
-        
+        benefitView.addSubviews([gradientView, benefitIcon, benefitLabel])
+
         DispatchQueue.main.asyncAfter(deadline: .now()) { [self] in
             gradientView.setGradient(withColors: [UIColor.white.withAlphaComponent(0).cgColor, UIColor.orange.withAlphaComponent(0.3).cgColor], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 1.0))
-        }
-        
+        }  
     }
+    
     
     func setUpConstrains(){
         restaurantImgCover.pinToEages(to: restaurantImageCard)
@@ -220,11 +220,13 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
     }
     
     
+    
     func setOfferAttributedLabel(withTitle title: String, withSubtitle subtitle: String) -> NSAttributedString {
         let attributedText = NSMutableAttributedString(attributedString: NSAttributedString(string: title.uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13,weight: .bold) , NSAttributedString.Key.foregroundColor: UIColor.orange]))
         attributedText.append(NSAttributedString(string: "\n• \(subtitle) •".uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 7,weight: .regular) , NSAttributedString.Key.foregroundColor: UIColor.orange]))
         return attributedText
     }
+    
     
     func setRestaurantInfoLabel(withRating rating: Float, withTime time: String , withDesc desc: String) -> NSAttributedString {
         let attributedText = NSMutableAttributedString(string:"")

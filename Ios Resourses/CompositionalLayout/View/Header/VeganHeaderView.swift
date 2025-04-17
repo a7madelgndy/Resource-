@@ -9,6 +9,7 @@ import UIKit
 
 class VeganHeaderView: UICollectionReusableView {
     static let Identifier = "VeganHeaderView"
+    
     let titleLabel : UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
@@ -18,10 +19,14 @@ class VeganHeaderView: UICollectionReusableView {
         l.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return l
     }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configerTitle()
     }
+    
+    
     private func configerTitle() {
         addSubview(titleLabel)
         NSLayoutConstraint.activate([
@@ -32,6 +37,8 @@ class VeganHeaderView: UICollectionReusableView {
             
         ])
     }
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
