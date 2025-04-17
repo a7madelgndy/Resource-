@@ -20,7 +20,7 @@ class SeactionDecorationView: UICollectionReusableView {
     // MARK: FUNCTIONS -
     
     func setUpViews(){
-        self.backgroundColor = .red
+        self.backgroundColor = .systemGray6
         layer.cornerRadius = 20
     }
 }

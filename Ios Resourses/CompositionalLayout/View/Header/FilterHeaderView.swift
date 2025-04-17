@@ -50,6 +50,7 @@ class FilterHeaderView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         [allRestaurants, filterBtn, filterIcon,  divider].forEach{addSubview($0)}
+        backgroundColor = .tertiaryLabel
         configureConsTrains()
     }
     private func configureConsTrains() {

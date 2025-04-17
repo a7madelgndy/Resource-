@@ -27,6 +27,8 @@ class FoodViewController: UIViewController {
         cv.register(RestaurantListCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier)
         
         cv.register(FilterHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: FilterHeaderView.headerIdentifier)
+        
+        cv.register(DividerFooterView.self, forSupplementaryViewOfKind: "Footer", withReuseIdentifier: DividerFooterView.footerIdentifier)
         return cv
     }()
     
@@ -69,10 +71,7 @@ class FoodViewController: UIViewController {
             
         ])
     }
-}
-
-//MARK: Ext
-extension FoodViewController {
+    
     func configureCompoitionalLayou() {
         let layout = UICollectionViewCompositionalLayout { sectionIndex,  enviorment in
             switch sectionIndex {
@@ -87,62 +86,6 @@ extension FoodViewController {
 }
 
 
-extension FoodViewController : UICollectionViewDataSource , UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section {
-        case 0 : foodTopBannerMockData.count
-        case 1: foodCategoryMockData.count
-        default: restaurantListMockData.count
-        }
-    }
-    
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        3
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch indexPath.section{
-        case 0:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier, for: indexPath) as? FoodTopBannerCollectionViewCell else {
-                fatalError("Unable deque cell...")
-            }
-            cell.cellData = foodTopBannerMockData[indexPath.row]
-            return cell
-        case 1:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? FoodCategoryCollectionViewCell else {
-                fatalError("Unable deue cell..")
-            }
-            cell.cellData = foodCategoryMockData[indexPath.row]
-            return cell
-        default :
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier, for: indexPath) as? RestaurantListCollectionViewCell else {
-                fatalError("Unable deue cell..")
-            }
-            cell.cellData = restaurantListMockData[indexPath.row]
-            return cell
-        }
-        
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == "Header" {
-            switch indexPath.section {
-            default :
-                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FilterHeaderView.headerIdentifier, for: indexPath) as! FilterHeaderView
-                return header
-                
-            }
-        }
-        
-        return UICollectionReusableView()
-  
-    }
-}
 #Preview {
     FoodViewController()
 }
