@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		152433472DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152433462DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift */; };
+		155EF9D82DB1231600CEFCB9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */; };
 		157170652DABFEE70074A696 /* done.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 157170642DABFEE70074A696 /* done.jpg */; };
 		157170682DAC23170074A696 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157170672DAC23170074A696 /* FoodViewController.swift */; };
 		158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		152433462DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		157170642DABFEE70074A696 /* done.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = done.jpg; sourceTree = "<group>"; };
 		157170672DAC23170074A696 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButon+EXT.swift"; sourceTree = "<group>"; };
@@ -75,6 +77,13 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		155EF9D62DB122E200CEFCB9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		157170662DAC22B00074A696 /* CompositionalLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +115,7 @@
 		158A1CEE2DAD6F2B00267AF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				155EF9D62DB122E200CEFCB9 /* New Group */,
 				158A1CF72DAD72EC00267AF0 /* Cell */,
 				158A1CEF2DAD6F3000267AF0 /* Header */,
 			);
@@ -116,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				158A1CF02DAD6F5500267AF0 /* SectionDecorationView.swift */,
+				155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15B0C1FF2DB0115700C5D9D1 /* RestaurantListModel.swift in Sources */,
+				155EF9D82DB1231600CEFCB9 /* FilterHeaderView.swift in Sources */,
 				158A1CFA2DAD72FE00267AF0 /* FoodTopBannerCollectionViewCell.swift in Sources */,
 				158A1CEC2DAD6C7D00267AF0 /* UIView + EXT.swift in Sources */,
 				157170682DAC23170074A696 /* FoodViewController.swift in Sources */,
