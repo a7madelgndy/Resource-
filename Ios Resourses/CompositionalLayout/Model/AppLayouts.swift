@@ -87,7 +87,11 @@ class AppLayouts {
 
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: "Header", alignment: .top
+        )
         
+        section.boundarySupplementaryItems = [header]
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         return section
     }

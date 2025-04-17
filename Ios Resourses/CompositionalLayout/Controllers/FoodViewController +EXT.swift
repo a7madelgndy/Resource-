@@ -59,8 +59,11 @@ extension FoodViewController : UICollectionViewDataSource , UICollectionViewDele
 
         if kind == "Header" {
             switch indexPath.section {
-            default :
+            case 2 :
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FilterHeaderView.headerIdentifier, for: indexPath) as! FilterHeaderView
+                return header
+            default :
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: VeganHeaderView.Identifier, for: indexPath) as! VeganHeaderView
                 return header
             }
             

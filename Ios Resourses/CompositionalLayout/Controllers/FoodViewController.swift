@@ -30,6 +30,7 @@ class FoodViewController: UIViewController {
         cv.register(FilterHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: FilterHeaderView.headerIdentifier)
         
         cv.register(DividerFooterView.self, forSupplementaryViewOfKind: "Footer", withReuseIdentifier: DividerFooterView.footerIdentifier)
+        cv.register(VeganHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: VeganHeaderView.Identifier)
         
         return cv
     }()

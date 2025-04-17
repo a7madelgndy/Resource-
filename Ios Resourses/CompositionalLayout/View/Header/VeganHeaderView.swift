@@ -8,12 +8,14 @@
 import UIKit
 
 class VeganHeaderView: UICollectionReusableView {
+    static let Identifier = "VeganHeaderView"
     let titleLabel : UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textAlignment = .center
         l.text = "vegetarain meals".uppercased()
-        l.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        l.textColor = .secondaryLabel
+        l.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return l
     }()
     override init(frame: CGRect) {
