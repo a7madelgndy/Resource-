@@ -24,6 +24,7 @@ class FoodViewController: UIViewController {
         cv.register(FoodTopBannerCollectionViewCell.self, forCellWithReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier)
         
         cv.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
+        cv.register(RestaurantListCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier)
         return cv
     }()
     
@@ -74,8 +75,8 @@ extension FoodViewController {
         let layout = UICollectionViewCompositionalLayout { sectionIndex,  enviorment in
             switch sectionIndex {
             case 0 : return AppLayouts.shared.foodBannderSection()
-            default :
-                return AppLayouts.shared.foodCategorySection()
+            case 1 : return AppLayouts.shared.foodCategorySection()
+            default : return AppLayouts.shared.restaurantListSection()
             }
         }
         collectionView.setCollectionViewLayout(layout, animated: true)
@@ -88,12 +89,12 @@ extension FoodViewController : UICollectionViewDataSource , UICollectionViewDele
         switch section {
         case 0 : foodTopBannerMockData.count
         case 1: foodCategoryMockData.count
-        default: RestaurantListModel.count
+        default: restaurantListMockData.count
         }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -104,11 +105,17 @@ extension FoodViewController : UICollectionViewDataSource , UICollectionViewDele
             }
             cell.cellData = foodTopBannerMockData[indexPath.row]
             return cell
-        default:
+        case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? FoodCategoryCollectionViewCell else {
                 fatalError("Unable deue cell..")
             }
                 cell.cellData = foodCategoryMockData[indexPath.row]
+                return cell
+        default :
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier, for: indexPath) as? RestaurantListCollectionViewCell else {
+                fatalError("Unable deue cell..")
+            }
+                cell.cellData = restaurantListMockData[indexPath.row]
                 return cell
             }
             
