@@ -14,6 +14,7 @@
 		155EF9DF2DB139BF00CEFCB9 /* FoodViewController +EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9DE2DB139BF00CEFCB9 /* FoodViewController +EXT.swift */; };
 		155EF9E12DB13E9000CEFCB9 /* RestuarntVeganCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E02DB13E9000CEFCB9 /* RestuarntVeganCollectionViewCell.swift */; };
 		155EF9E32DB141AB00CEFCB9 /* RestaurantVeganModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E22DB141AB00CEFCB9 /* RestaurantVeganModel.swift */; };
+		155EF9E62DB154EC00CEFCB9 /* VeganHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9E52DB154EC00CEFCB9 /* VeganHeaderView.swift */; };
 		157170652DABFEE70074A696 /* done.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 157170642DABFEE70074A696 /* done.jpg */; };
 		157170682DAC23170074A696 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157170672DAC23170074A696 /* FoodViewController.swift */; };
 		158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */; };
@@ -39,6 +40,7 @@
 		155EF9DE2DB139BF00CEFCB9 /* FoodViewController +EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodViewController +EXT.swift"; sourceTree = "<group>"; };
 		155EF9E02DB13E9000CEFCB9 /* RestuarntVeganCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarntVeganCollectionViewCell.swift; sourceTree = "<group>"; };
 		155EF9E22DB141AB00CEFCB9 /* RestaurantVeganModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVeganModel.swift; sourceTree = "<group>"; };
+		155EF9E52DB154EC00CEFCB9 /* VeganHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganHeaderView.swift; sourceTree = "<group>"; };
 		157170642DABFEE70074A696 /* done.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = done.jpg; sourceTree = "<group>"; };
 		157170672DAC23170074A696 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		158A1CE82DAD690100267AF0 /* UIButon+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButon+EXT.swift"; sourceTree = "<group>"; };
@@ -87,13 +89,6 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		155EF9D62DB122E200CEFCB9 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		157170662DAC22B00074A696 /* CompositionalLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +121,6 @@
 		158A1CEE2DAD6F2B00267AF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				155EF9D62DB122E200CEFCB9 /* New Group */,
 				158A1CF72DAD72EC00267AF0 /* Cell */,
 				158A1CEF2DAD6F3000267AF0 /* Header */,
 			);
@@ -140,6 +134,7 @@
 				155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */,
 				155EF9D92DB134C600CEFCB9 /* SeactionDecorationView.swift */,
 				155EF9DB2DB137D600CEFCB9 /* DividerFooterView.swift */,
+				155EF9E52DB154EC00CEFCB9 /* VeganHeaderView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -275,6 +270,7 @@
 				157170682DAC23170074A696 /* FoodViewController.swift in Sources */,
 				158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */,
 				155EF9DC2DB137D600CEFCB9 /* DividerFooterView.swift in Sources */,
+				155EF9E62DB154EC00CEFCB9 /* VeganHeaderView.swift in Sources */,
 				158A1CF12DAD6F5500267AF0 /* SectionDecorationView.swift in Sources */,
 				159BA2582DA7C78800C4BDEB /* ViewController.swift in Sources */,
 				158A1CF62DAD727C00267AF0 /* FoodTopBannerModel.swift in Sources */,
