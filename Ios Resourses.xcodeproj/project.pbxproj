@@ -105,6 +105,13 @@
 			name = "protocols ";
 			sourceTree = "<group>";
 		};
+		155EF9F02DB1A74B00CEFCB9 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
 		157170662DAC22B00074A696 /* CompositionalLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +208,7 @@
 		159BA2522DA7C78800C4BDEB /* Ios Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				155EF9F02DB1A74B00CEFCB9 /* Coredata */,
 				157170662DAC22B00074A696 /* CompositionalLayout */,
 				150015BB2DABC43500674223 /* Local notification */,
 				150015BC2DABC44300674223 /* Support */,

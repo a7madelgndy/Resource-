@@ -91,6 +91,13 @@ class FoodViewController: UIViewController {
 }
 
 
+
+extension FoodViewController: FilterActionDelegate {
+    func didfilterButtonTapped() {
+        print("Open Filter")
+    }
+}
+
 #Preview {
-    FoodViewController()
+    return FoodViewController()
 }

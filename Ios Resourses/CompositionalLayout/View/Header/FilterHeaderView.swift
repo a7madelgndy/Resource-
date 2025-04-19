@@ -6,18 +6,22 @@
 //
 
 import UIKit
-
+protocol FilterActionDelegate: AnyObject {
+    func didfilterButtonTapped()
+}
 class FilterHeaderView: UICollectionReusableView {
     static let headerIdentifier = "FilterHeaderView"
     
     var leadingConstraints: NSLayoutConstraint?
     var trailingConstraints: NSLayoutConstraint?
     
+    weak var  delegate:FilterActionDelegate?
+    
     lazy var allRestaurants: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .label.withAlphaComponent(0.8)
-        l.text = "AAl restaurants".uppercased()
+        l.text = "All restaurants".uppercased()
         l.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         return l
     }()
@@ -26,7 +30,8 @@ class FilterHeaderView: UICollectionReusableView {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Sort/Fiter", for: .normal)
-        btn.setTitleColor(.label.withAlphaComponent(0.8), for: .reserved)
+        btn.setTitleColor(.label.withAlphaComponent(0.8), for: .normal)
+        btn.addTarget(self, action: #selector(filterButtonTapped), for: .touchUpInside)
         return btn
     }()
     
@@ -49,7 +54,7 @@ class FilterHeaderView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews([allRestaurants, filterBtn, filterIcon ,divider])
-        backgroundColor = .tertiaryLabel
+        backgroundColor = .systemBackground
         configureConsTrains()
     }
     
@@ -78,7 +83,9 @@ class FilterHeaderView: UICollectionReusableView {
         trailingConstraints?.isActive = true
     }
 
-    
+    @objc func filterButtonTapped() {
+        delegate?.didfilterButtonTapped()
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

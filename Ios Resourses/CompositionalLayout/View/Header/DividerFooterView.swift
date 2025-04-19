@@ -13,7 +13,7 @@ class DividerFooterView: UICollectionReusableView {
     lazy var footer: UIView = {
         let f = UIView()
         f.translatesAutoresizingMaskIntoConstraints = false
-        f.backgroundColor = .blue
+        f.backgroundColor = .lightGray
         return f
     }()
 

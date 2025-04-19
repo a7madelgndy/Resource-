@@ -8,6 +8,7 @@
 import UIKit
 
 class SeactionDecorationView: UICollectionReusableView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpViews()
