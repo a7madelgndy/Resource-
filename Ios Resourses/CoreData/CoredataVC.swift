@@ -12,39 +12,48 @@ import CoreData
 
 class CoredataVC: UIViewController {
     var coredata: CoredataManager?
+    
+    lazy var textFiled : UITextField = {
+        var tf = UITextField()
+        tf.delegate = self
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.textColor = .black
+        tf.returnKeyType = .done
+        tf.layer.borderWidth = 1
+        return tf
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
+        
         coredata = CoredataManager.shared
-        coredata?.save(movieTitle: "it", movieRating: 7.5)
-
-
+        coredata?.save(movieTitle: "c", movieRating: 7.5)
+        print(coredata?.getMovies())
     }
     
 }
 
+#Preview()  {
+    CoredataVC()
+}
 
-class CoredataManager{
-    static let shared = CoredataManager()
-    private init() {}
+extension  CoredataVC {
+    func configureUI() {
+        view.backgroundColor = .white
+        view.addSubview(textFiled)
+        textFiled.setCenterX(inView: view)
+        textFiled.setCenterY(inView: view)
+        textFiled.setHeight(height: 40)
+        textFiled.setWidth(width: 200)
     
-    
-    func save(movieTitle : String , movieRating: Float) {
-         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-         let manageContext = appDelegate.persistentContainer.viewContext
-        
-        guard let entity = NSEntityDescription.entity(forEntityName: "Movie", in: manageContext) else {fatalError("can not find the entity")}
-        
-        let movie = NSManagedObject(entity: entity, insertInto: manageContext)
-        
-        movie.setValue(movieTitle, forKey: "title")
-        
-        movie.setValue(movieRating, forKey: "rating")
-        
-        do {
-            try manageContext.save()
-            print("saved")
-        }catch {
-            print(error)
-        }
+    }
+}
+
+extension CoredataVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFiled.resignFirstResponder()
+        print(textField.text ?? " ")
+        return true
     }
 }

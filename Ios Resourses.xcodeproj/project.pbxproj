@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		152257752DB517FE00A0B955 /* iosResourses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 152257732DB517FE00A0B955 /* iosResourses.xcdatamodeld */; };
+		152257772DB52ADF00A0B955 /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152257762DB52ADF00A0B955 /* CoredataManager.swift */; };
+		1522577A2DB52B9200A0B955 /* UIView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152257792DB52B9200A0B955 /* UIView+EXT.swift */; };
 		152433472DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152433462DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift */; };
 		155EF9D82DB1231600CEFCB9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */; };
 		155EF9DA2DB134C600CEFCB9 /* SeactionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9D92DB134C600CEFCB9 /* SeactionDecorationView.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		152257742DB517FE00A0B955 /* iosResourses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iosResourses.xcdatamodel; sourceTree = "<group>"; };
+		152257762DB52ADF00A0B955 /* CoredataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
+		152257792DB52B9200A0B955 /* UIView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EXT.swift"; sourceTree = "<group>"; };
 		152433462DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		155EF9D92DB134C600CEFCB9 /* SeactionDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeactionDecorationView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 				159BA25C2DA7C78A00C4BDEB /* Assets.xcassets */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		152257782DB52B8200A0B955 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				152257792DB52B9200A0B955 /* UIView+EXT.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		155EF9EB2DB1616100CEFCB9 /* protocols  */ = {
@@ -205,6 +217,7 @@
 		159BA2522DA7C78800C4BDEB /* Ios Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				152257782DB52B8200A0B955 /* Extentions */,
 				15D7D4D02DB46A7200D475AC /* CoreData */,
 				157170662DAC22B00074A696 /* CompositionalLayout */,
 				150015BB2DABC43500674223 /* Local notification */,
@@ -220,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				15D7D4D12DB46A8100D475AC /* CoredataVC.swift */,
+				152257762DB52ADF00A0B955 /* CoredataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -305,6 +319,7 @@
 				157170682DAC23170074A696 /* FoodViewController.swift in Sources */,
 				158A1CE92DAD690100267AF0 /* UIButon+EXT.swift in Sources */,
 				155EF9DC2DB137D600CEFCB9 /* DividerFooterView.swift in Sources */,
+				152257772DB52ADF00A0B955 /* CoredataManager.swift in Sources */,
 				155EF9E62DB154EC00CEFCB9 /* VeganHeaderView.swift in Sources */,
 				155EF9EA2DB15D1800CEFCB9 /* UICollectionView+EXT.swift in Sources */,
 				158A1CF12DAD6F5500267AF0 /* SectionDecorationView.swift in Sources */,
@@ -314,6 +329,7 @@
 				152433472DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift in Sources */,
 				158A1CF42DAD6FC000267AF0 /* AppLayouts.swift in Sources */,
 				15B0C1FA2DAFEC8D00C5D9D1 /* FoodCategoryModel.swift in Sources */,
+				1522577A2DB52B9200A0B955 /* UIView+EXT.swift in Sources */,
 				152257752DB517FE00A0B955 /* iosResourses.xcdatamodeld in Sources */,
 				155EF9E32DB141AB00CEFCB9 /* RestaurantVeganModel.swift in Sources */,
 				15B0C1FC2DB0104000C5D9D1 /* RestaurantListCollectionViewCell.swift in Sources */,
