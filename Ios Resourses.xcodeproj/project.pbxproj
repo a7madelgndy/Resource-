@@ -211,6 +211,7 @@
 				150015BC2DABC44300674223 /* Support */,
 				159BA2612DA7C78A00C4BDEB /* Info.plist */,
 				157170642DABFEE70074A696 /* done.jpg */,
+				152257732DB517FE00A0B955 /* iosResourses.xcdatamodeld */,
 			);
 			path = "Ios Resourses";
 			sourceTree = "<group>";
@@ -219,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				15D7D4D12DB46A8100D475AC /* CoredataVC.swift */,
-				152257732DB517FE00A0B955 /* iosResourses.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -265,7 +265,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = 159BA2472DA7C78800C4BDEB;
 			productRefGroup = 159BA2512DA7C78800C4BDEB /* Products */;
@@ -530,8 +529,7 @@
 				152257742DB517FE00A0B955 /* iosResourses.xcdatamodel */,
 			);
 			currentVersion = 152257742DB517FE00A0B955 /* iosResourses.xcdatamodel */;
-			name = iosResourses.xcdatamodeld;
-			path = "/Users/ahmedelgndy/Desktop/Projects/Ios Resourses/Ios Resourses/CoreData/iosResourses.xcdatamodeld";
+			path = iosResourses.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
