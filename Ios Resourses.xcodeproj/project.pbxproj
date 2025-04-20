@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152257752DB517FE00A0B955 /* iosResourses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 152257732DB517FE00A0B955 /* iosResourses.xcdatamodeld */; };
 		152433472DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152433462DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift */; };
 		155EF9D82DB1231600CEFCB9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */; };
 		155EF9DA2DB134C600CEFCB9 /* SeactionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155EF9D92DB134C600CEFCB9 /* SeactionDecorationView.swift */; };
@@ -34,9 +35,11 @@
 		15B0C1FA2DAFEC8D00C5D9D1 /* FoodCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B0C1F92DAFEC8D00C5D9D1 /* FoodCategoryModel.swift */; };
 		15B0C1FC2DB0104000C5D9D1 /* RestaurantListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B0C1FB2DB0104000C5D9D1 /* RestaurantListCollectionViewCell.swift */; };
 		15B0C1FF2DB0115700C5D9D1 /* RestaurantListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B0C1FE2DB0115700C5D9D1 /* RestaurantListModel.swift */; };
+		15D7D4D22DB46A8100D475AC /* CoredataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7D4D12DB46A8100D475AC /* CoredataVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		152257742DB517FE00A0B955 /* iosResourses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iosResourses.xcdatamodel; sourceTree = "<group>"; };
 		152433462DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		155EF9D72DB1231600CEFCB9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		155EF9D92DB134C600CEFCB9 /* SeactionDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeactionDecorationView.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		15B0C1F92DAFEC8D00C5D9D1 /* FoodCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryModel.swift; sourceTree = "<group>"; };
 		15B0C1FB2DB0104000C5D9D1 /* RestaurantListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListCollectionViewCell.swift; sourceTree = "<group>"; };
 		15B0C1FE2DB0115700C5D9D1 /* RestaurantListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListModel.swift; sourceTree = "<group>"; };
+		15D7D4D12DB46A8100D475AC /* CoredataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +107,6 @@
 				155EF9EC2DB1619D00CEFCB9 /* UICollectionViewCell+Protocol.swift */,
 			);
 			name = "protocols ";
-			sourceTree = "<group>";
-		};
-		155EF9F02DB1A74B00CEFCB9 /* Coredata */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coredata;
 			sourceTree = "<group>";
 		};
 		157170662DAC22B00074A696 /* CompositionalLayout */ = {
@@ -208,7 +205,7 @@
 		159BA2522DA7C78800C4BDEB /* Ios Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				155EF9F02DB1A74B00CEFCB9 /* Coredata */,
+				15D7D4D02DB46A7200D475AC /* CoreData */,
 				157170662DAC22B00074A696 /* CompositionalLayout */,
 				150015BB2DABC43500674223 /* Local notification */,
 				150015BC2DABC44300674223 /* Support */,
@@ -216,6 +213,15 @@
 				157170642DABFEE70074A696 /* done.jpg */,
 			);
 			path = "Ios Resourses";
+			sourceTree = "<group>";
+		};
+		15D7D4D02DB46A7200D475AC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				15D7D4D12DB46A8100D475AC /* CoredataVC.swift */,
+				152257732DB517FE00A0B955 /* iosResourses.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +315,12 @@
 				152433472DAED68500BAC2EC /* FoodCategoryCollectionViewCell.swift in Sources */,
 				158A1CF42DAD6FC000267AF0 /* AppLayouts.swift in Sources */,
 				15B0C1FA2DAFEC8D00C5D9D1 /* FoodCategoryModel.swift in Sources */,
+				152257752DB517FE00A0B955 /* iosResourses.xcdatamodeld in Sources */,
 				155EF9E32DB141AB00CEFCB9 /* RestaurantVeganModel.swift in Sources */,
 				15B0C1FC2DB0104000C5D9D1 /* RestaurantListCollectionViewCell.swift in Sources */,
 				159BA2542DA7C78800C4BDEB /* AppDelegate.swift in Sources */,
 				159BA2562DA7C78800C4BDEB /* SceneDelegate.swift in Sources */,
+				15D7D4D22DB46A8100D475AC /* CoredataVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +522,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		152257732DB517FE00A0B955 /* iosResourses.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				152257742DB517FE00A0B955 /* iosResourses.xcdatamodel */,
+			);
+			currentVersion = 152257742DB517FE00A0B955 /* iosResourses.xcdatamodel */;
+			name = iosResourses.xcdatamodeld;
+			path = "/Users/ahmedelgndy/Desktop/Projects/Ios Resourses/Ios Resourses/CoreData/iosResourses.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 159BA2482DA7C78800C4BDEB /* Project object */;
 }
